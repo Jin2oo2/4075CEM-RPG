@@ -10,7 +10,7 @@ using namespace std;
 class Monster : public Character
 {
 public:
-    Monster(string _name, int _level) : Character(_name, _level) {}
+    Monster(string _name, int _level ) : Character(_name, _level) {}
 
     friend ostream& operator<<(ostream& os, const Monster& monster);
 
