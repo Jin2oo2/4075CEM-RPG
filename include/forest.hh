@@ -5,6 +5,7 @@
 #include <vector>
 #include "Player.hh"
 #include "Monster.hh"
+#include "battle.hh"
 using namespace std;
 
 class ForestMonsters : public Monster
@@ -38,7 +39,7 @@ void forest(Player player)
         cin>>choice2;
         if (choice2=="B"){
             cout<<monster1;
-            player.battle(monster2);
+            battle(player, monster2);
             // continue game based on the outcome
         }
         else{
@@ -51,7 +52,7 @@ void forest(Player player)
         cin>>choice3;
         if(choice3=="B"){
             cout<<monster3;
-            player.battle(monster3);
+            battle(player, monster3);
             // continue based on the outcome
         }
         else{

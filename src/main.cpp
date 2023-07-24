@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "../include/Player.hh"
 #include "../include/Monster.hh"
+#include "../include/forest.hh"
 using namespace std;
 
 bool is_valid_path(char c)
@@ -48,6 +49,7 @@ void start_game()
     if (path == 'f' || path == 'F')
     {
         cout << "You are going to the Enchanted Forest" << endl;
+        forest(player);
     }
     else if (path == 's' || path == 'S')
     {
