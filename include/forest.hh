@@ -30,37 +30,57 @@ void forest(Player player)
 
     //player.battle(monster1);
 
-    cout<<"There are choices in front of you"<<player.get_name()<<"One lead to the deep forest"<<endl<<"While the other leads to a clearing"<<endl<<"Enter L if you wish to enter the deep forest or enter R if you wish to enter the valley";
+    cout<<"Enter E to enter the enchanted forest: ";
     cin>>choice;
-    if (choice=="L"){
+    if (choice=="E"){
         cout<<"So you have chosen to enter the deep forest"<<player.get_name();
         string choice2;
-        cout<<"You have encountered the Shadow Thorn!"<<"Do you wish to battle or flee?"<<endl<<"Enter B if you wish to battle or Enter F if you wish to flee";
+        cout<<"You have encountered the Shadow Thorn!"<<"Do you wish to battle or flee?"<<endl<<"Enter B if you wish to battle or Enter F if you wish to flee: ";
         cin>>choice2;
         if (choice2=="B"){
-            cout<<monster1;
+            cout<<monster2;
             battle(player, monster2);
             // continue game based on the outcome
+            if(player.is_alive()){
+                cout<<player.get_name()<<"continues on their journey......";
+            }
         }
         else{
             cout<<"You fled from Shadow Thorn";
-        }
-        cout<<"Continuing down the deep forest";
-        cout<<"You have encountered the Grive Goliath"<<endl<<"Do you wish to battle or flee?";
-        cout<<"Enter B for battle or F for flee";
-        string choice3;
-        cin>>choice3;
-        if(choice3=="B"){
-            cout<<monster3;
-            battle(player, monster3);
+            cout<<"Continuing down the deep forest";
+            cout<<"You have encountered the Grive Goliath"<<endl<<"Do you wish to battle or flee?";
+            cout<<"Enter B for battle or F for flee";
+            string choice3;
+            cin>>choice3;
+            if(choice3=="B"){
+                cout<<monster3;
+                battle(player, monster3);
+                if(player.is_alive()){
+                    cout<<player.get_name()<<"continues on their journey......";
+                }
+                
             // continue based on the outcome
+            }
+
+           
         }
-        else{
-            cout<<"You chose to flee"<<player.get_name();
+        cout<<player.get_name()<<"Now that you have faced one of the gretest challenges the Enchanted can offer one final challenge awaits you!";
+        cout<<"The"<<monster1<<"Awaits you as the final challenge!";
+        cout<<"This battle is necessary, as it tests you to find out if you really are worthy of being hailed as the enchanted conqueror";
+        battle(player,monster1);
+        if(player.is_alive()){
+            cout<<"You have won the title of The Enchanted Conqueror";
+            cout<<"All hail"<<player.get_name();
         }
+        
+        
 
         
     }
+    else{
+        cout<<"Invalid choice: "<<player.get_name();
+    }
+ 
 }
 
 #endif
