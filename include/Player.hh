@@ -42,6 +42,9 @@ public:
             level_up(level_up_amount);
         }
     }
+    void restore_health(){
+        health+=10;
+    }
 
 };
 
