@@ -10,7 +10,9 @@ int main()
 
 
     cout << "Amidst the desolate landscape of an icy realm, the Frozen Citadel stands as a monument of both majestic grandeur and perilous trials. It rises like a frosty titan, piercing the wintry skies with its towering spires." << "The entire structure is encased in ice, reflecting the cold, unforgiving nature of this place." << endl;
+    this_thread::sleep_for(chrono::seconds(3));
 	cout << "Within the Frozen Citadel reside four fearsome ice monsters, each guarding a relic of unimaginable power." << endl;
+    this_thread::sleep_for(chrono::seconds(3));
 	cout << "The Frostbite Wyvern" << endl;
 	cout << "This ancient ice dragon glides effortlessly through the frozen air, with scales as blue as a frozen lake. Its breath can freeze anything it touches, making it an awe-inspiring yet deadly creature." << endl;
 	
