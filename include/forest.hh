@@ -17,11 +17,15 @@ public:
 
 void forest(Player player)
 {
-    ForestMonsters monster1 = ForestMonsters("Verdant Viper", 19);
-    ForestMonsters monster2 = ForestMonsters("Shadow thorn" , 18);
-    ForestMonsters monster3 = ForestMonsters("Grive Goliath", 20);
+    ForestMonsters monster1 = ForestMonsters("Verdant Viper", 2);
+    ForestMonsters monster2 = ForestMonsters("Shadow thorn" , 1);
+    ForestMonsters monster3 = ForestMonsters("Grive Goliath", 1);
+
 
     string choice;
+    bool result;
+    bool result1;
+    bool result2;
     cout<<"Nestled in the heart of a forgotten realm, the Enchanted Forest is a place of ominous beauty and unyielding danger. It stretches far and wide, an endless expanse of towering ancient trees, their gnarled branches twisted like the skeletal fingers of malevolent spirits. A perpetual mist hangs in the air, casting an eerie, ethereal glow over the forest floor and obscuring any sense of direction."<<endl;
     cout<<"The forest is the home to 3 monsters"<<endl;
     cout<<"Verdant Viper"<<endl<<"This forest-dwelling monster resembles a venomous snake, but it has emerald green scales and camouflages itself perfectly among the foliage."<<endl<<"It strikes swiftly and silently, making it a feared predator in the woods.";
@@ -39,11 +43,30 @@ void forest(Player player)
         cin>>choice2;
         if (choice2=="B"){
             cout<<monster2;
-            battle(player, monster2);
-            // continue game based on the outcome
-            if(player.is_alive()){
-                cout<<" "<<player.get_name()<<"continues on their journey......";
-            }
+            result=battle(player, monster2);
+            if (!result)
+                {
+                    cout << "You lost.";                    
+                }
+            if (result)
+                {
+                    cout << "You Won!";
+                    player.gain_experience(50);
+                    cout<<player.get_name()<<"Now that you have faced one of the gretest challenges the Enchanted can offer one final challenge awaits you!";
+                    cout<<"The"<<monster1<<"Awaits you as the final challenge!";
+                    cout<<"This battle is necessary, as it tests you to find out if you really are worthy of being hailed as the enchanted conqueror";
+                    result2=battle(player,monster1);
+                    if(result2){
+                        cout<<"You have won the title of The Enchanted Conqueror";
+                        cout<<"All hail"<<player.get_name();
+                    }
+                    if(!result2){
+                        "You lost the game!";
+                    }
+                }
+
+                
+            
         }
         else{
             cout<<"You fled from Shadow Thorn";
@@ -54,31 +77,50 @@ void forest(Player player)
             cin>>choice3;
             if(choice3=="B"){
                 cout<<monster3;
-                battle(player, monster3);
-                if(player.is_alive()){
-                    cout<<" "<<player.get_name()<<"continues on their journey......";
+                result = battle(player, monster3);
+                if (!result)
+                {
+                    cout << "You lost.";                    
                 }
-                
-            // continue based on the outcome
+
+                if (result)
+                {
+                    cout << "You Won!";
+                    player.gain_experience(50);
+                    cout<<player.get_name()<<"Now that you have faced one of the gretest challenges the Enchanted can offer one final challenge awaits you!";
+                    cout<<"The"<<monster1<<"Awaits you as the final challenge!";
+                    cout<<"This battle is necessary, as it tests you to find out if you really are worthy of being hailed as the enchanted conqueror";
+                    result1=battle(player,monster1);
+                    if(result1)
+                    {
+
+                        cout<<"You have won the title of The Enchanted Conqueror";
+                        cout<<"All hail"<<player.get_name();
+                        
+                    }
+
+                    if (!result1) 
+                    {
+                        cout << "you lose";
+                    }
+                    
+
+ 
+
+                }
+
             }
 
            
         }
-        cout<<player.get_name()<<"Now that you have faced one of the gretest challenges the Enchanted can offer one final challenge awaits you!";
-        cout<<"The"<<monster1<<"Awaits you as the final challenge!";
-        cout<<"This battle is necessary, as it tests you to find out if you really are worthy of being hailed as the enchanted conqueror";
-        battle(player,monster1);
-        if(player.is_alive()){
-            cout<<"You have won the title of The Enchanted Conqueror";
-            cout<<"All hail"<<" "<<player.get_name();
-        }
+       
         
         
 
         
     }
     else{
-        cout<<"Invalid choice: "<<" "<<player.get_name();
+        cout<<"Invalid choice: "<<player.get_name();
     }
  
 }

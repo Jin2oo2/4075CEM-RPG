@@ -9,7 +9,7 @@
 using namespace std;
 
 // Used to battle when player encounters a monster
-void battle(Player player, Monster monster)
+bool battle(Player player, Monster monster)
 {
     cout << "You are battling against\n" << monster << endl;
 
@@ -70,10 +70,12 @@ void battle(Player player, Monster monster)
     {
         cout << "You killed " << monster.get_name() << endl;
         player.gain_experience(50);
+        return true;
     }
     else
     {
         cout << "You died. GAME OVER" << endl;
+        return false;
     }
 }
 
