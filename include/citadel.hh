@@ -1,3 +1,5 @@
+#ifndef CITADEL_H
+#define CITADEL_H
 using namespace std;
 #include <iostream>
 #include <string>
