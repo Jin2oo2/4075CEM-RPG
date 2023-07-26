@@ -53,7 +53,6 @@ void Desert(Player player)
 
         if (choice2 == "B" || choice2 == "b")
         {
-            cout << monster1 << endl;
             result = battle(player, monster1);
             player.restore_health();
 
@@ -85,7 +84,7 @@ void Desert(Player player)
 
         if (choice3 == "B" || choice3 == "b")
         {
-            cout << monster3 << endl;
+
             result = battle(player, monster3);
 
             if (!result)
