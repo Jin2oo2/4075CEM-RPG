@@ -55,6 +55,7 @@ void Desert(Player player)
         {
             cout << monster1 << endl;
             result = battle(player, monster1);
+            player.restore_health();
 
             if (!result)
             {
@@ -95,6 +96,7 @@ void Desert(Player player)
 
             cout << "You won!" << endl;
             player.gain_experience(50);
+            player.restore_health();
         }
         else if (choice3 == "F" || choice3 == "f")
         {
