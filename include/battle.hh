@@ -74,7 +74,6 @@ bool battle(Player player, Monster monster)
     }
     else
     {
-        cout << "You died. GAME OVER" << endl;
         return false;
     }
 }
