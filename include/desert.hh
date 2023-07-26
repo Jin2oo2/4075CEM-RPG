@@ -136,22 +136,18 @@ void Desert(Player player)
     this_thread::sleep_for(chrono::seconds(3));
     cout << "The underworld desert is the home to 3 monsters:" << endl;
     this_thread::sleep_for(chrono::seconds(3));
-    cout << "1. Sand Wrym: The Sand Serpent is a fearsome creature that lurks beneath the shifting dunes of the desert. It has a long, sinuous body covered in golden scales that help it blend seamlessly with the sand." << endl;
+    cout << "1. Sand Wrym: The Sand Wyrm is a massive, burrowing creature that roams the desert sands. It is serpent-like in appearance, with tough, scaled skin that helps protect it from the harsh environment. The Sand Wyrm is known for its powerful jaw and venomous fangs, making it a formidable opponent to face." << endl;
     this_thread::sleep_for(chrono::seconds(3));
-    cout << "2. Sand Golem: Scorchwing is a massive, fire-breathing bird that rules the skies over the scorching desert. Its feathers are a brilliant mix of red, orange, and gold, resembling the flames it commands." << endl;
+    cout << "2. Sand Golem: The Cactus Golem is a creature born from ancient magic merging with the glistening sand from the underworld and it has a humanoid form. As this adversary is born from sand particles, it can camoflage really easily in it's surroundings making it a challenging adversary." << endl;
     this_thread::sleep_for(chrono::seconds(3));
-    cout << "3. Mirage Djinn : The Oasis Guardian is a colossal, humanoid creature made entirely of living sand and vegetation. It stands as a silent protector of the desert's hidden oases, ensuring the delicate balance of life within these rare sanctuaries is preserved." << endl;
+    cout << "3. Mirage Djinn : The Mirage Djinn is a mystical and elusive creature that harnesses the power of illusions. It appears as a shimmering figure with shifting shapes, making it difficult to discern its true form. The Djinn thrives on confusion and tricks to outwit its opponents." << endl;
 
-    cout << "You have 2 choices, either you enter the overworld or the underworld of the desert. What do you choose?" << endl;
-    cout << "Enter 'O' for the overworld and 'U' for the underworld: ";
-    cin >> choice;
-
-    if (choice == "O" || choice == "o")
+   
     {
-        cout << "So you have chosen to enter the overworld of the Desert of the Damned, " << player.get_name() << "." << endl;
+        cout << "So you have chosen to enter the underworld of the Desert of the Damned, " << player.get_name() << "." << endl;
 
         string choice2;
-        cout << "You have encountered the Sand Serpent!" << endl;
+        cout << "You have encountered the Sand Golem !" << endl;
         cout << "Do you wish to battle or flee?" << endl;
         cout << "Enter 'B' if you wish to battle or 'F' if you wish to flee: ";
         cin >> choice2;
@@ -172,7 +168,7 @@ void Desert(Player player)
         }
         else if (choice2 == "F" || choice2 == "f")
         {
-            cout << "You fled from the Sand Serpent." << endl;
+            cout << "You fled from the Sand Golem." << endl;
         }
         else
         {
@@ -180,8 +176,8 @@ void Desert(Player player)
             return;
         }
 
-        cout << "Continuing deeper into the desert overworld..." << endl;
-        cout << "You have encountered the Oasis Guardian!" << endl;
+        cout << "Continuing deeper into the desert underworld..." << endl;
+        cout << "You have encountered the Sand Wrym!" << endl;
         cout << "Do you wish to battle or flee?" << endl;
         cout << "Enter 'B' for battle or 'F' for flee: ";
         string choice3;
@@ -204,7 +200,7 @@ void Desert(Player player)
         }
         else if (choice3 == "F" || choice3 == "f")
         {
-            cout << "You fled from the Oasis Guardian." << endl;
+            cout << "You fled from the Sand Wrym." << endl;
         }
         else
         {
@@ -212,9 +208,9 @@ void Desert(Player player)
             return;
         }
 
-        cout << "Continuing deeper into the desert overworld..." << endl;
-        cout << "You have encountered Scorchwing, the final challenge!" << endl;
-        cout << "This battle is necessary, as it tests you to find out if you really are worthy of being hailed as the Desert King." << endl;
+        cout << "Continuing deeper into the desert underworld..." << endl;
+        cout << "You have encountered Mirage Djinn, the final boss!" << endl;
+        cout << "This battle will decide if you'll be able to escape the underworld and continue your adventure or stay trapped in the underworld forever." << endl;
         result = battle(player, monster2);
 
         if (!result)
@@ -223,8 +219,7 @@ void Desert(Player player)
             return;
         }
 
-        cout << "You won the title of The Desert King!" << endl;
-        cout << "All hail " << player.get_name() << "!" << endl;
+        cout << "You defeated the Mirage Djinn! After the legendary triumph, you can now continue to the next world!" << endl;
     }
     else if (choice == "U" || choice == "u")
     {
