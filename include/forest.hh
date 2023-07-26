@@ -42,7 +42,7 @@ void forest(Player player)
             battle(player, monster2);
             // continue game based on the outcome
             if(player.is_alive()){
-                cout<<player.get_name()<<"continues on their journey......";
+                cout<<" "<<player.get_name()<<"continues on their journey......";
             }
         }
         else{
@@ -56,7 +56,7 @@ void forest(Player player)
                 cout<<monster3;
                 battle(player, monster3);
                 if(player.is_alive()){
-                    cout<<player.get_name()<<"continues on their journey......";
+                    cout<<" "<<player.get_name()<<"continues on their journey......";
                 }
                 
             // continue based on the outcome
@@ -70,7 +70,7 @@ void forest(Player player)
         battle(player,monster1);
         if(player.is_alive()){
             cout<<"You have won the title of The Enchanted Conqueror";
-            cout<<"All hail"<<player.get_name();
+            cout<<"All hail"<<" "<<player.get_name();
         }
         
         
@@ -78,7 +78,7 @@ void forest(Player player)
         
     }
     else{
-        cout<<"Invalid choice: "<<player.get_name();
+        cout<<"Invalid choice: "<<" "<<player.get_name();
     }
  
 }
