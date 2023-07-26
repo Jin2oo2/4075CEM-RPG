@@ -53,8 +53,8 @@ void Desert(Player player)
 
         if (choice2 == "B" || choice2 == "b")
         {
-            cout << monster2 << endl;
-            result = battle(player, monster2);
+            cout << monster1 << endl;
+            result = battle(player, monster1);
 
             if (!result)
             {
