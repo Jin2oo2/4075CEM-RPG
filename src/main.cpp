@@ -57,7 +57,8 @@ void start_game()
     }
     else if (path == 'd' || path == 'D')
     {
-        cout << "You are going to the scorching Desert of the Ancients" << endl;
+        cout << "You are going to the scorching Desert of the Damned" << endl;
+        Desert(player);
     }
     else if (path == 'c' || path == 'C')
     {
