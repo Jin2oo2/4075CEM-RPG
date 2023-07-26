@@ -1,3 +1,17 @@
+using namespace std;
+#include <iostream>
+#include <string>
+#include <array>
+#include <vector>
+#include <algorithm>
+#include <cstdlib>
+#include <map>
+#include <limits>
+#include <ctime>
+#include <sstream>
+#include <chrono>
+#include <thread>
+
 int main() 
 
 {
