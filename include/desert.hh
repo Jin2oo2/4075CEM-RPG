@@ -141,10 +141,7 @@ void Desert(Player player)
     cout << "2. Sand Golem: The Cactus Golem is a creature born from ancient magic merging with the glistening sand from the underworld and it has a humanoid form. As this adversary is born from sand particles, it can camoflage really easily in it's surroundings making it a challenging adversary." << endl;
     this_thread::sleep_for(chrono::seconds(3));
     cout << "3. Mirage Djinn : The Mirage Djinn is a mystical and elusive creature that harnesses the power of illusions. It appears as a shimmering figure with shifting shapes, making it difficult to discern its true form. The Djinn thrives on confusion and tricks to outwit its opponents." << endl;
-
-   
-    {
-        cout << "So you have chosen to enter the underworld of the Desert of the Damned, " << player.get_name() << "." << endl;
+    cout << "So you have chosen to enter the underworld of the Desert of the Damned, " << player.get_name() << "." << endl;
 
         string choice2;
         cout << "You have encountered the Sand Golem !" << endl;
@@ -221,10 +218,9 @@ void Desert(Player player)
 
         cout << "You defeated the Mirage Djinn! After the legendary triumph, you can now continue to the next world!" << endl;
     }
-    else if (choice == "U" || choice == "u")
-    {
-        
-    }
+
+   
+    
     else
     {
         cout << "Invalid choice." << endl;
