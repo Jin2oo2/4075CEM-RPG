@@ -17,9 +17,9 @@ public:
 
 void shadow(Player player)
 {
-    ShadowMonsters monster1 = ShadowMonsters("Skeleton", 17);
-    ShadowMonsters monster2 = ShadowMonsters("Witch" , 19);
-    ShadowMonsters monster3 = ShadowMonsters("Grim Reaper", 20);
+    ShadowMonsters monster1 = ShadowMonsters("Skeleton", 1);
+    ShadowMonsters monster2 = ShadowMonsters("Witch" , 1);
+    ShadowMonsters monster3 = ShadowMonsters("Grim Reaper", 2);
 
     string choice;
     cout<<"In a faraway land lies a mysterious and dark realm named Shadow. This region is forever engulfed in darkness, and its inhabitants live beneath an ever-present silver moon that never disappears. Once a prosperous kingdom, this land has fallen under an ancient curse inflicted by the malevolent Grim Reaper, leaving it trapped in eternal twilight."<<endl;
@@ -40,7 +40,6 @@ void shadow(Player player)
         if (choice2=="B"){
             cout<<monster1;
             battle(player, monster2);
-            // continue game based on the outcome
         }
         else{
             cout<<"You chose to flee for now.";
