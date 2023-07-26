@@ -109,7 +109,7 @@ void Desert(Player player)
         cout << "Continuing deeper into the desert overworld..." << endl;
         cout << "You have encountered Scorchwing, the final challenge!" << endl;
         cout << "This battle is necessary, as it tests you to find out if you really are worthy of being hailed as the Desert King." << endl;
-        result = battle(player, monster1);
+        result = battle(player, monster2);
 
         if (!result)
         {
