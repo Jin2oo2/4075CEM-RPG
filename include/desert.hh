@@ -19,8 +19,8 @@ public:
 void Desert(Player player)
 {
     DesertMonsters monster1("Sand Serpent", 1);
-    DesertMonsters monster2("Scorchwing", 1);
-    DesertMonsters monster3("Oasis Guardian", 2);
+    DesertMonsters monster2("Scorchwing", 2);
+    DesertMonsters monster3("Oasis Guardian", 1);
 
     string choice;
     bool result;
