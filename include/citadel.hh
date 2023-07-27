@@ -29,10 +29,10 @@ void Citadel(Player player)
 
 {
 
-    CitadelMonsters monster1 = CitadelMonsters("The Frostbite Wyvern", 2);
-    CitadelMonsters monster2 = CitadelMonsters("The Frostbound Golem", 3);
-    CitadelMonsters monster3 = CitadelMonsters("The Glacial Specter", 5);
-    CitadelMonsters monster4 = CitadelMonsters("The Frost King", 7);
+    CitadelMonsters monster1 = CitadelMonsters("The Frostbite Wyvern", 1);
+    CitadelMonsters monster2 = CitadelMonsters("The Frostbound Golem", 2);
+    CitadelMonsters monster3 = CitadelMonsters("The Glacial Specter", 1);
+    CitadelMonsters monster4 = CitadelMonsters("The Frost King", 2);
 
 
     cout << "Amidst the desolate landscape of an icy realm, the Frozen Citadel stands as a monument of both majestic grandeur and perilous trials. It rises like a frosty titan, piercing the wintry skies with its towering spires." << "The entire structure is encased in ice, reflecting the cold, unforgiving nature of this place." << endl;
