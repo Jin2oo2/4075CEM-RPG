@@ -129,6 +129,36 @@ void Desert(Player player)
         // Code for the underworld of the desert goes here (by zayn)
         string choice;
     bool result;
+
+
+    DesertMonsters monster4("Sand Wyrm", player.get_level());
+    DesertMonsters monster5("Sand Golem", player.get_level());
+    DesertMonsters monster6("Mirage Djinn", player.get_level()+1);
+    std::vector<Monster> desertMonsters;
+
+
+    desertMonsters.push_back(monster4);
+    desertMonsters.push_back(monster5);
+    desertMonsters.push_back(monster6);
+
+
+for (const Monster& monster : desertMonsters) {
+        std::cout << monster.get_name() << std::endl;
+        if (monster.get_name() == "Sand Wrym")
+        {
+            cout << "These are the living dead. These creatures are risen from their graves by the Grim Reaper's dark magic." << "They prey on every living creature.";
+        }
+        if (monster.get_name() == "Sand Golem")
+        {
+            cout << "They are the creatures who can cast magic spells and curses. They have several dark magic powers." << endl << "Witches can easily detect unusual moments and would try to neutralise any trespasser.";
+        }
+        if (monster.get_name() == "Mirage Djinn")
+        {
+            cout << "Grim Reaper is the strongest power in this realm." << endl << "Grim Reaper not only has magical abilities, but also a scythe which can end any enemy in a single swing.";
+        }
+    }
+
+
     this_thread::sleep_for(chrono::seconds(3));
     cout << "Long ago, in a world where vast deserts spread under the scorching sun, an ancient civilization thrived. The people of this land mastered the art of harnessing the desert's power, constructing magnificent cities atop the sand dunes until it was struck by a calamity which ended the civilization and turned the region into ruins. Now, it's home to deadly underworld creatures." << endl;
     this_thread::sleep_for(chrono::seconds(3));
@@ -208,7 +238,7 @@ void Desert(Player player)
         cout << "Continuing deeper into the desert underworld..." << endl;
         cout << "You have encountered Mirage Djinn, the final boss!" << endl;
         cout << "This battle will decide if you'll be able to escape the underworld and continue your adventure or stay trapped in the underworld forever." << endl;
-        result = battle(player, monster2);
+        result = battle(player, monster6);
 
         if (!result)
         {
@@ -221,6 +251,7 @@ void Desert(Player player)
 
    
     
+
     else
     {
         cout << "Invalid choice." << endl;
