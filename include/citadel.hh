@@ -61,6 +61,7 @@ void Citadel(Player player)
 
     string choice; 
     string choice2;
+    bool result;
     cout << "Enter 'D' if you wish to brave the depths of the Frozen Citadel, or enter 'V' if you choose to venture into the icy valley." << endl;
     cin >> choice;
 
@@ -83,11 +84,23 @@ void Citadel(Player player)
             else if (choice2 == "B" || choice2 == "b") {
                 
                 
-                battle(player, monster);
-                if (player.is_alive())
+                result=battle(player, monster);
+                if (result)
                 {
                     continue;
                 }
+                if (!result)
+                {
+                    cout << "You lost." << endl;
+                
+                }
+                cout << "You won the icy Citadel!" << endl;
+                
+
+            
+                 
+                return;
+            
             }
             else {
                 cout << "Invalid choice. Please enter 'B' or 'F'." << endl;
