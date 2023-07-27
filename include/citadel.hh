@@ -70,7 +70,7 @@ void Citadel(Player player)
     if (choice == "D")
     {
 
-        cout << "So you have chosen to enter the deep forest " << player.get_name() << endl;
+        cout << "So you have chosen to enter the Icy Citadel " << player.get_name() << endl;
         for (const auto& monster : citadelMonstersArray) {
             string choice2;
             cout << "You have encountered " << monster.get_name() << "! Do you wish to battle or flee?" << endl;
