@@ -13,6 +13,9 @@ using namespace std;
 #include <sstream>
 #include <chrono>
 #include <thread>
+#include "Player.hh"
+#include "Monster.hh"
+#include "battle.hh"
 
 int main() 
 
@@ -88,3 +91,4 @@ int main()
     }
 	
 }
+#endif
