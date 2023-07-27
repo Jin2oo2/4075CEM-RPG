@@ -4,6 +4,7 @@
 #include "../include/Player.hh"
 #include "../include/Monster.hh"
 #include "../include/forest.hh"
+#include "../include/desert.hh"
 using namespace std;
 
 bool is_valid_path(char c)
