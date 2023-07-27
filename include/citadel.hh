@@ -29,10 +29,10 @@ void Citadel(Player player)
 
 {
 
-    CitadelMonsters monster1 = CitadelMonsters("The Frostbite Wyvern", 23);
-    CitadelMonsters monster2 = CitadelMonsters("The Frostbound Golem", 25);
-    CitadelMonsters monster3 = CitadelMonsters("The Glacial Specter", 26);
-    CitadelMonsters monster4 = CitadelMonsters("The Frost King", 27);
+    CitadelMonsters monster1 = CitadelMonsters("The Frostbite Wyvern", 2);
+    CitadelMonsters monster2 = CitadelMonsters("The Frostbound Golem", 3);
+    CitadelMonsters monster3 = CitadelMonsters("The Glacial Specter", 5);
+    CitadelMonsters monster4 = CitadelMonsters("The Frost King", 7);
 
 
     cout << "Amidst the desolate landscape of an icy realm, the Frozen Citadel stands as a monument of both majestic grandeur and perilous trials. It rises like a frosty titan, piercing the wintry skies with its towering spires." << "The entire structure is encased in ice, reflecting the cold, unforgiving nature of this place." << endl;
@@ -87,18 +87,14 @@ void Citadel(Player player)
                 result=battle(player, monster);
                 if (result)
                 {
-                    continue;
+                    cout << "You won the icy Citadel!" << endl;
                 }
                 if (!result)
                 {
                     cout << "You lost." << endl;
                 
                 }
-                cout << "You won the icy Citadel!" << endl;
                 
-
-            
-                 
                 return;
             
             }
@@ -107,7 +103,7 @@ void Citadel(Player player)
             }
         }
 
-        return 0;
+        
     }
 	
 }
