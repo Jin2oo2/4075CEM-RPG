@@ -62,7 +62,7 @@ void Citadel(Player player)
     string choice; 
     string choice2;
     bool result;
-    cout << "Enter 'D' if you wish to brave the depths of the Frozen Citadel, or enter 'V' if you choose to venture into the icy valley." << endl;
+    cout << "Enter 'D' if you wish to brave the depths of the Frozen Citadel. " << endl;
     cin >> choice;
 
     array<CitadelMonsters, 4> citadelMonstersArray = { monster1, monster2, monster3, monster4 };
