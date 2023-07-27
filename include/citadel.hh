@@ -92,7 +92,7 @@ void Citadel(Player player)
             }
         }
 
-        return 0;
+        
     }
 	
 }
