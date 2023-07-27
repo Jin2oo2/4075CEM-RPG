@@ -65,6 +65,7 @@ void start_game()
     else if (path == 'c' || path == 'C')
     {
         cout << "You are going to the Frozen Citadel" << endl;
+        Citadel(player);
     }
     
 
