@@ -5,6 +5,7 @@
 #include "../include/Monster.hh"
 #include "../include/forest.hh"
 #include "../include/desert.hh"
+#include"../include/citadel.hh"
 using namespace std;
 
 bool is_valid_path(char c)
