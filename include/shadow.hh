@@ -55,7 +55,7 @@ void shadow(Player player)
     cout << "Witch" << endl << "They are the creatures who can cast magic spells and curses. They have several dark magic powers." << endl << "Witches can easily detect unusual moments and would try to neutralise any trespasser.";
     cout << "Grim Reaper" << endl << "Grim Reaper is the strongest power in this realm." << endl << "Grim Reaper not only has magical abilities, but also a scythe which can end any enemy in a single swing.";
 
-    //player.battle(monster1);
+    
 
     cout << "You're presented with 2 choices." << player.get_name() << "Enter the Shadow realm" << endl << "Enter the graveyard" << endl << "Enter L if you wish to enter the Shadow Realm or enter R if you wish to enter the graveyard";
     cin >> choice;
@@ -67,7 +67,6 @@ void shadow(Player player)
         if (choice2 == "B") {
             cout << monster1;
             battle(player, monster2);
-            // continue game based on the outcome
         }
         else {
             cout << "You chose to flee for now.";
