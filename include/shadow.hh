@@ -72,7 +72,7 @@ void shadow(Player player)
             cout << "You chose to flee for now.";
         }
         cout << "Continuing down the deep forest";
-        cout << "You have encountered the Grive Goliath" << endl << "Do you wish to battle or flee?";
+        cout << "You have encountered The Grim Reaper! This is the final battle!!" << endl << "Do you wish to battle or flee?";
         cout << "Enter B for battle or F for flee";
         string choice3;
         cin >> choice3;
