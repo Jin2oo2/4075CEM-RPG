@@ -17,10 +17,15 @@ using namespace std;
 #include "Monster.hh"
 #include "battle.hh"
 
-int main() 
+class CitadelMonsters : public Monster
+{
+
+public:
+     CitadelMonsters(string _name , int _level) : Monster(_name , _level ){}
+};
+void Citadel(Player player) 
 
 {
-    Player player("test", 50);
 
     CitadelMonsters monster1 = CitadelMonsters("The Frostbite Wyvern", 23);
     CitadelMonsters monster2 = CitadelMonsters("The Frostbound Golem", 25);
