@@ -17,6 +17,8 @@ using namespace std;
 #include "Monster.hh"
 #include "battle.hh"
 
+/* Time Lapse Function -----> https://stackoverflow.com/questions/48872714/time-lapse-code-in-c */
+
 class CitadelMonsters : public Monster
 {
 
@@ -92,7 +94,7 @@ void Citadel(Player player)
             }
         }
 
-        
+        return 0;
     }
 	
 }
